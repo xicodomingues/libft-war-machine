@@ -6,7 +6,7 @@
 /*   By: fsoares- <fsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:21 by jtoty             #+#    #+#             */
-/*   Updated: 2022/02/09 18:31:05 by fsoares-         ###   ########.fr       */
+/*   Updated: 2024/02/06 08:19:28 by jgamarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int main(int argc, const char *argv[])
 	elem2 = ft_lstnewone(str2);
 	elem3 = ft_lstnewone(str3);
 	elem4 = ft_lstnewone(str4);
-	alarm(TIMEOUT);
+	alarm(5);
 	if (argc == 1 || !elem || !elem2 || !elem3 || !elem4)
 		return (0);
 	elem->next = elem2;
@@ -90,14 +90,11 @@ int main(int argc, const char *argv[])
 			return (0);
 		if (list == elem)
 			write(1, "A new list is not returned\n", 27);
-		int i;
-		i = 0;
 		ft_print_result(list);
 		while (list->next)
 		{
 			list = list->next;
 			ft_print_result(list);
-			i++;
 		}
 	}
 	return (0);
